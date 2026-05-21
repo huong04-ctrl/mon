@@ -1,56 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Campus Food Map for Int'l Students</title>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <title>Danh mục đầu tư | NGUYEN THI HUONG</title>
     <link rel="stylesheet" href="style.css">
-    <!-- FontAwesome for icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Leaflet JS (Free Open-Source Map) -->
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="app-container">
-        <!-- Sidebar / Filter Panel -->
-        <aside class="sidebar">
-            <div class="sidebar-header">
-                <h1>🍽️ Campus Food Map</h1>
-                <p>Curated for International Students</p>
-            </div>
-            
-            <div class="search-box">
-                <i class="fa-solid fa-magnifying-glass"></i>
-                <input type="text" id="searchInput" placeholder="Search for restaurants, cuisines...">
-            </div>
+    <div class="blob-bg"></div>
+    
+    <header>
+        <nav>
+            <div class="logo">MyPortfolio</div>
+            <ul class="nav-links">
+                <li><a href="#home">Trang chủ</a></li>
+                <li><a href="#about">Giới thiệu</a></li>
+                <li><a href="#skills">Kỹ năng</a></li>
+                <li><a href="#contact">Liên hệ</a></li>
+        
+            </ul>
+        </nav>
+    </header>
 
-            <div class="filters">
-                <h3><i class="fa-solid fa-filter"></i> Filters</h3>
-                <div class="filter-chips">
-                    <button class="chip active" data-filter="all">All</button>
-                    <button class="chip" data-filter="halal">☪️ Halal</button>
-                    <button class="chip" data-filter="vegan">🥗 Vegan/Veg</button>
-                    <button class="chip" data-filter="english">🇬🇧 English Menu</button>
-                    <button class="chip" data-filter="cheap">💸 Under 10k ₩</button>
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h2 class="subtitle">Xin chào, tôi là</h2>
+                <h1 class="title">NGUYEN THI HUONG<br></h1>
+                <p class="description">Một nhà thiết kế/phát triển sáng tạo, luôn tạo ra những trải nghiệm người dùng đẹp mắt và sống động.</p>
+                <div class="cta-buttons">
+                    <a href="#about" class="btn primary">Tìm hiểu thêm về tôi</a>
+                    <a href="#contact" class="btn secondary">Liên hệ với tôi</a>
                 </div>
             </div>
-
-            <!-- List of restaurants (will be populated by JS) -->
-            <div class="restaurant-list" id="restaurantList">
-                <!-- Restaurant cards go here -->
+            <div class="hero-image">
+                <div class="glass-card">
+                    <div class="avatar">
+                        <img src="profile.png" alt="Ảnh đại diện" class="avatar-img">
+                    </div>
+                    <div class="card-info">
+                        <h3>Creative</h3>
+                        <p>Web Developer & Designer</p>
+                    </div>
+                </div>
             </div>
-        </aside>
+        </section>
 
-        <!-- Map Container -->
-        <main class="map-area">
-            <div id="map" class="map-container">
-                <!-- Leaflet map will render here -->
+        <section id="about" class="fade-in">
+            <h2 class="section-title">Giới thiệu bản thân</h2>
+            <div class="glass-panel">
+                <p>Xin chào! Tôi là <strong>NGUYEN THI HUONG</strong>, một người luôn thích học hỏi và phát triển không ngừng.</p>
+                <br>
+                <p>Tôi rất quan tâm đến các xu hướng công nghệ mới nhất và có niềm đam mê xây dựng các trang web hiện đại, có tính tương tác cao. Mục tiêu của tôi là mang lại những trải nghiệm kỹ thuật số tuyệt vời thông qua thiết kế lấy người dùng làm trung tâm và mã nguồn được tối ưu hóa.</p>
             </div>
-        </main>
-    </div>
+        </section>
+        
+        <section id="skills" class="fade-in">
+            <h2 class="section-title">Kỹ năng của tôi</h2>
+            <div class="skills-grid">
+                <div class="skill-card">HTML5 / CSS3</div>
+                <div class="skill-card">JavaScript</div>
+                <div class="skill-card">Thiết kế UI/UX</div>
+                <div class="skill-card">Web đáp ứng</div>
+                <div class="skill-card">Giải quyết vấn đề</div>
+                <div class="skill-card">Tư duy sáng tạo</div>
+            </div>
+        </section>
+
+        <section id="contact" class="fade-in">
+            <h2 class="section-title">Liên hệ</h2>
+            <div class="glass-panel" style="display: flex; flex-direction: column; gap: 1rem;">
+                <p><strong>Email:</strong> huong.nguyen@example.com</p>
+                <p><strong>Điện thoại:</strong> +84 123 456 789</p>
+                <p><strong>Địa chỉ:</strong> Hà Nội, Việt Nam</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 NGUYEN THI HUONG. All rights reserved.</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
