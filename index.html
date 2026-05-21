@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campus Food Map for Int'l Students</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Leaflet JS (Free Open-Source Map) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar / Filter Panel -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1>🍽️ Campus Food Map</h1>
+                <p>Curated for International Students</p>
+            </div>
+            
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" id="searchInput" placeholder="Search for restaurants, cuisines...">
+            </div>
+
+            <div class="filters">
+                <h3><i class="fa-solid fa-filter"></i> Filters</h3>
+                <div class="filter-chips">
+                    <button class="chip active" data-filter="all">All</button>
+                    <button class="chip" data-filter="halal">☪️ Halal</button>
+                    <button class="chip" data-filter="vegan">🥗 Vegan/Veg</button>
+                    <button class="chip" data-filter="english">🇬🇧 English Menu</button>
+                    <button class="chip" data-filter="cheap">💸 Under 10k ₩</button>
+                </div>
+            </div>
+
+            <!-- List of restaurants (will be populated by JS) -->
+            <div class="restaurant-list" id="restaurantList">
+                <!-- Restaurant cards go here -->
+            </div>
+        </aside>
+
+        <!-- Map Container -->
+        <main class="map-area">
+            <div id="map" class="map-container">
+                <!-- Leaflet map will render here -->
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
